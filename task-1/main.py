@@ -10,7 +10,12 @@ def guessNumber (userNum, computerNum):
     elif userNum > computerNum: print("Моє число менше")
     else: print("Ви вгадали")
 
-m = int(input("Введіть число m: "))
+m = int(input("Введіть число m (m не повинне дорівнювати 0): "))
+while m == 0:
+    print("Ділення на 0 неможливе")
+    m = int(input("Введіть число m: "))
+
+    
 n = int(input("Введіть число n: "))
 
 print("Результат обчислення числа z =", calculateZ(m, n))
